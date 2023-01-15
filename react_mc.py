@@ -135,7 +135,9 @@ def build_loop(fsm, s, frontiers):
 
 def build_prefix(fsm, s):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
-
+    
+    # Insert inside frontiers the regions to reach s
+    # [ init ... pre_s ]
     curr = fsm.init 
     frontiers = []
     while not s <= curr:
@@ -144,8 +146,11 @@ def build_prefix(fsm, s):
 
     path = []
     last = s
+    # Construct the path traversing the frontiers in reverse
     for frontier in reversed(frontiers):
         can_reach_last = fsm.pre(last)
+        # The current state is one of the states that can reach last in
+        # one step
         current_state = fsm.pick_one_state(frontier * can_reach_last)
         
         if has_inputs:
