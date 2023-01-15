@@ -174,7 +174,7 @@ def build_counter_example(fsm, recur, pre_reach):
 
         r *= recur
         if s <= r:
-            return build_prefix(fsm, s) + build_loop(fsm, s, frontiers)
+            return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
 
     raise ValueError("The recurrence region does not contain any loop")
 
