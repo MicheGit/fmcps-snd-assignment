@@ -101,21 +101,23 @@ def compute_reachability(fsm):
     return reach
 
 def build_loop(fsm, s, frontiers):
+    has_inputs = len(fsm.bddEnc.inputsVars) > 0
+
     for k in range(len(frontiers)):
         if s <= frontiers[k]:
             break
-
-    has_inputs = len(fsm.bddEnc.inputsVars) > 0
 
     path = [ s.get_str_values() ]
     curr = s
 
     for i in range(k - 1, -1, -1):
+        old = curr
         pred = fsm.pre(curr) * frontiers[i]
         curr = fsm.pick_one_state(pred)
         
         if has_inputs:
-            pass
+            inputs = fsm.get_inputs_between_states(old, curr)
+            path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
         else:
             path.insert(0, {})
 
@@ -123,7 +125,8 @@ def build_loop(fsm, s, frontiers):
     
     # Looping input
     if has_inputs:
-        pass
+        inputs = fsm.get_inputs_between_states(s, s)
+        path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
     else:
         path.insert(0, {})
 
@@ -146,7 +149,8 @@ def build_prefix(fsm, s):
         current_state = fsm.pick_one_state(frontier * can_reach_last)
         
         if has_inputs:
-            pass
+            inputs = fsm.get_inputs_between_states(current_state, last)
+            path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
         else:
             path.insert(0, {})
 
