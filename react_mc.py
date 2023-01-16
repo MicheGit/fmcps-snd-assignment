@@ -166,22 +166,37 @@ def build_prefix(fsm, s):
     return path
 
 def build_counter_example(fsm, recur, pre_reach):
+    r = BDD.false()
+    new = fsm.post(recur)
+    frontiers = [ new ]
+
+    while not new.is_false():
+        r += new
+        new = fsm.post(new) * pre_reach
+        new -= r
+        frontiers.append(new)
+
+    r *= recur
+    
+    s = fsm.pick_one_state(recur * r)
+    return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
+
     # One (or more) of the states inside recur is a looping one
-    for s in fsm.pick_all_states(recur):
-        r = BDD.false()
-        new = fsm.post(s) * pre_reach
-        frontiers = [ new ]
-        while not new.is_false():
-            r += new
-            new = fsm.post(new) * pre_reach
-            new -= r
-            frontiers.append(new)
+    # for s in fsm.pick_all_states(recur):
+    #     r = BDD.false()
+    #     new = fsm.post(s) * pre_reach
+    #     frontiers = [ new ]
+    #     while not new.is_false():
+    #         r += new
+    #         new = fsm.post(new) * pre_reach
+    #         new -= r
+    #         frontiers.append(new)
 
-        r *= recur
-        if s <= r:
-            return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
+    #     r *= recur
+    #     if s <= r:
+    #         return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
 
-    raise ValueError("The recurrence region does not contain any loop")
+    # raise ValueError("The recurrence region does not contain any loop")
 
 def check_react_spec(spec):
     """
