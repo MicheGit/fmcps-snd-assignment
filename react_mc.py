@@ -178,8 +178,11 @@ def build_counter_example(fsm, recur, pre_reach):
 
     r *= recur
     
-    s = fsm.pick_one_state(recur * r)
-    return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
+    s = fsm.pick_one_state_random(recur * r)
+
+    prefix = build_prefix(fsm, s)
+    postfix = build_loop(fsm, s, frontiers)
+    return tuple(prefix + postfix)
 
     # One (or more) of the states inside recur is a looping one
     # for s in fsm.pick_all_states(recur):
@@ -218,7 +221,7 @@ def check_react_spec(spec):
     
     # Potential candidate for the cycle
     # □ ◊ f -> □ ◊ g
-    # So the cycle contains a state that makes f true but the later ones
+    # So the cycle contains a state that makes f true but
     # don't ever make g true
     recur = reach * spec_f * spec_not_g
     while not recur.is_false(): # Iterate con recur_i
