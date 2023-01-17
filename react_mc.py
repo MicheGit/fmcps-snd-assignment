@@ -172,7 +172,7 @@ def build_counter_example(fsm, recur, pre_reach):
     # Phase 2: Counter example
     # Phase 2.1: Finding a knot
     r = BDD.false()
-    new = fsm.post(recur) # TODO ADD * pre_reach
+    new = fsm.post(recur) * pre_reach
     frontiers = [ new ]
 
     while not new.is_false():
@@ -181,10 +181,8 @@ def build_counter_example(fsm, recur, pre_reach):
                                             #   g is false.
         new -= r                            # We skip the old ones.
         frontiers.append(new)
-
-    r *= recur
     
-    s = fsm.pick_one_state_random(recur * r)
+    s = fsm.pick_one_state(recur * r)       # Let's pick one state in both recur and r.
 
     prefix = build_prefix(fsm, s)
     postfix = build_loop(fsm, s, frontiers)
