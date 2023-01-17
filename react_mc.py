@@ -91,12 +91,12 @@ def parse_react(spec):
     return (f_formula, g_formula)
 
 def compute_reachability(fsm):
-    reach = fsm.init
+    reach = fsm.init                    # All the initial states are reachable
     new = fsm.init
 
-    while not new.is_false():
-        new = fsm.post(new) - reach
-        reach += new
+    while not new.is_false():           # While there are more states to add
+        new = fsm.post(new) - reach     # The new states are the ones reachable from the already reached ones except, of course, the reached ones.
+        reach += new                    # The new states are added to the reachable ones
 
     return reach
 
@@ -217,20 +217,27 @@ def check_react_spec(spec):
     spec_f     = spec_to_bdd(fsm,  f)
     spec_not_g = spec_to_bdd(fsm, ~g)
 
+    # Phase 0: Computing the reachable region
     reach = compute_reachability(fsm)
     
-    # Potential candidate for the cycle
+    # Phase 1: Finding the cycle
+
     # □ ◊ f -> □ ◊ g
-    # So the cycle contains a state that makes f true but
-    # don't ever make g true
+    # The formula above doesn't hold when f holds at least once
+    #   and g never holds.
+    # We attempt finding a cycle where g never holds, starting from 
+    #   a state where, at the same time, f holds. We will refer 
+    #   to this state as the "knot".
+    # Recur contains all the possible "knots", i.e. the potential 
+    #   candidates to start a cycle.
     recur = reach * spec_f * spec_not_g
-    while not recur.is_false(): # Iterate con recur_i
+    while not recur.is_false():                 # While we still have "knots"
 
         pre_reach = BDD.false()                 # States that can reach recur 
-                                                # in >= 1 steps
-        new       = fsm.pre(recur) * spec_not_g # Ensure at least one 
-                                                # transition and that g is not
-                                                # true
+                                                #   in >= 1 steps.
+        new       = fsm.pre(recur) * spec_not_g # We need at least one 
+                                                #   transition and that g is never
+                                                #   true
 
         while not new.is_false():
             pre_reach += new
