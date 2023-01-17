@@ -39,7 +39,7 @@ In this cycle's body, we consider two regions:
 
 Then, we have an inner cycle that updates `pre_reach`: each iteration, it computes every time a region of states which can reach the `new` region in a single step; then it ignores the old ones and adds only the new ones to the `pre_reach` set. Of course, the algorithm takes only the ones where *g* doesn't hold.
 
-Note that this process ensures that `pre_reach` represents a region where there could be a loop within *k* steps, where *k* is the number of iterations. Thus, when all the knots in `recur` are also in `pre_reach`, it's sure that there is at least one cycle starting from one of those points. The algorithm will now find that cycle with the function `build_counter_example` (phase 2).
+Note that this process ensures that `pre_reach` represents a region where there could be a loop within *k* steps, where *k* is the number of iterations. Thus, when all the knots in `recur` are also in `pre_reach`, it's sure that there is at least one state that leads to a cycle in `recur`. The algorithm will now find that state with the function `build_counter_example` (phase 2).
 
 The inner cycle ends when there are no more new states to visit and `recur` never turns out to be a subset of `pre_reach`. This means that there are some states that don't lead the execution into a cycle. We get rid of those states with an intersection with `pre_reach`, i.e. we keep only the knots that might lead to a cycle, then we start again the outer cycle.
 
@@ -47,7 +47,7 @@ The outer cycle runs until there are no more possible candidates for a cycle (th
 
 ## 2. Counter example
 
-Given `recur` and `prereach_correctly` defined as in (1), the function
+Given `recur` and `pre_reach` correctly defined as in (1), the function
 `build_counter_examples` finds one of the *knots* that is not satisfying the
 condition set by the reactivity formula, that for sure it exists given the condition
 of (1).
