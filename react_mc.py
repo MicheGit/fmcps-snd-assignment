@@ -100,15 +100,17 @@ def compute_reachability(fsm):
 
     return reach
 
-def build_loop(fsm, s, frontiers):
+def build_loop(fsm, knot, frontiers):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
 
+    # Phase 2.2: Constructing the self loop
     for k in range(len(frontiers)):
-        if s <= frontiers[k]:
+        if knot <= frontiers[k]:
             break
-
-    path = [ s.get_str_values() ]
-    curr = s
+    # frontiers[k] contains the loop knot
+    
+    path = [ knot.get_str_values() ]
+    curr = knot
 
     for i in range(k - 1, -1, -1):
         old = curr
@@ -125,27 +127,28 @@ def build_loop(fsm, s, frontiers):
     
     # Looping input
     if has_inputs:
-        inputs = fsm.get_inputs_between_states(s, s)
+        inputs = fsm.get_inputs_between_states(knot, knot)
         path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
     else:
         path.insert(0, {})
 
-    path.insert(0, s.get_str_values())
+    path.insert(0, knot.get_str_values())
     return path
 
-def build_prefix(fsm, s):
+def build_prefix(fsm, knot):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
+    # 2.3 Reaching the self loop
     
     # Insert inside frontiers the regions to reach s
     # [ init ... pre_s ]
     curr = fsm.init 
     frontiers = []
-    while not s <= curr:
+    while not knot <= curr:
         frontiers.append(curr)
         curr = fsm.post(curr) - curr
 
     path = []
-    last = s
+    last = knot
     # Construct the path traversing the frontiers in reverse
     for frontier in reversed(frontiers):
         can_reach_last = fsm.pre(last)
@@ -166,40 +169,26 @@ def build_prefix(fsm, s):
     return path
 
 def build_counter_example(fsm, recur, pre_reach):
+    # Phase 2: Counter example
+    # Phase 2.1: Finding a knot
     r = BDD.false()
-    new = fsm.post(recur)
+    new = fsm.post(recur) # * pre_reach
     frontiers = [ new ]
 
     while not new.is_false():
         r += new
-        new = fsm.post(new) * pre_reach
-        new -= r
+        new = fsm.post(new) * pre_reach     # We take only the ones where
+                                            #   g is false.
+        new -= r                            # We skip the old ones.
         frontiers.append(new)
 
     r *= recur
     
-    s = fsm.pick_one_state_random(recur * r)
+    knot = fsm.pick_one_state_random(recur * r)
 
-    prefix = build_prefix(fsm, s)
-    postfix = build_loop(fsm, s, frontiers)
+    prefix = build_prefix(fsm, knot)
+    postfix = build_loop(fsm, knot, frontiers)
     return tuple(prefix + postfix)
-
-    # One (or more) of the states inside recur is a looping one
-    # for s in fsm.pick_all_states(recur):
-    #     r = BDD.false()
-    #     new = fsm.post(s) * pre_reach
-    #     frontiers = [ new ]
-    #     while not new.is_false():
-    #         r += new
-    #         new = fsm.post(new) * pre_reach
-    #         new -= r
-    #         frontiers.append(new)
-
-    #     r *= recur
-    #     if s <= r:
-    #         return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
-
-    # raise ValueError("The recurrence region does not contain any loop")
 
 def check_react_spec(spec):
     """
