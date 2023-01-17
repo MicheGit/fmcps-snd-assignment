@@ -74,7 +74,7 @@ At the end of the loop, `r` will contain all the states reachable from `recur` i
 ### 2.2 Constructing the self loop
 
 We construct the self loop starting from `knot` using the `frontiers`, we assume
-their correctness from (2.1) in the function `build_loop`:
+their correctness from (2.1) in the function `build_loop`.
 
 We find the smallest index `k` in which we can find `knot`, it for sure exists
 given the condition imposed in (2.1) and we build a path from `knot` going backwards

@@ -100,17 +100,17 @@ def compute_reachability(fsm):
 
     return reach
 
-def build_loop(fsm, knot, frontiers):
+def build_loop(fsm, s, frontiers):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
 
     # Phase 2.2: Constructing the self loop
     for k in range(len(frontiers)):
-        if knot <= frontiers[k]:
+        if s <= frontiers[k]:
             break
     # frontiers[k] contains the loop knot
     
-    path = [ knot.get_str_values() ]
-    curr = knot
+    path = [ s.get_str_values() ]
+    curr = s
 
     for i in range(k - 1, -1, -1):
         old = curr
@@ -127,15 +127,15 @@ def build_loop(fsm, knot, frontiers):
     
     # Looping input
     if has_inputs:
-        inputs = fsm.get_inputs_between_states(knot, knot)
+        inputs = fsm.get_inputs_between_states(s, s)
         path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
     else:
         path.insert(0, {})
 
-    path.insert(0, knot.get_str_values())
+    path.insert(0, s.get_str_values())
     return path
 
-def build_prefix(fsm, knot):
+def build_prefix(fsm, s):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
     # 2.3 Reaching the self loop
     
@@ -143,12 +143,12 @@ def build_prefix(fsm, knot):
     # [ init ... pre_s ]
     curr = fsm.init 
     frontiers = []
-    while not knot <= curr:
+    while not s <= curr:
         frontiers.append(curr)
         curr = fsm.post(curr) - curr
 
     path = []
-    last = knot
+    last = s
     # Construct the path traversing the frontiers in reverse
     for frontier in reversed(frontiers):
         can_reach_last = fsm.pre(last)
@@ -172,7 +172,7 @@ def build_counter_example(fsm, recur, pre_reach):
     # Phase 2: Counter example
     # Phase 2.1: Finding a knot
     r = BDD.false()
-    new = fsm.post(recur) # * pre_reach
+    new = fsm.post(recur) # TODO ADD * pre_reach
     frontiers = [ new ]
 
     while not new.is_false():
@@ -184,10 +184,10 @@ def build_counter_example(fsm, recur, pre_reach):
 
     r *= recur
     
-    knot = fsm.pick_one_state_random(recur * r)
+    s = fsm.pick_one_state_random(recur * r)
 
-    prefix = build_prefix(fsm, knot)
-    postfix = build_loop(fsm, knot, frontiers)
+    prefix = build_prefix(fsm, s)
+    postfix = build_loop(fsm, s, frontiers)
     return tuple(prefix + postfix)
 
 def check_react_spec(spec):
