@@ -41,7 +41,7 @@ Then, we have an inner cycle that updates `pre_reach` accordingly, adding every 
 
 ## 2. Counter example
 
-Given `recur` and pre `reach_correctly` defined as in (1), the function
+Given `recur` and `prereach_correctly` defined as in (1), the function
 `build_counter_examples` finds one of the *knots* that is not satisfying the
 condition set by the reactivity formula, that for sure it exists given the condition
 of (1).
