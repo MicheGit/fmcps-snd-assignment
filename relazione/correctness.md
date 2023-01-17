@@ -54,7 +54,7 @@ of (1).
 
 ### 2.1 Finding a *knot*
 
-Within this part we will follow the steps of the execution from all the possible knots. In this context, we define the following invariants after *k* iteration:
+Within this part we will follow the steps of the execution from all the possible knots. In this context, we define the following invariants after *k* iterations:
 
 - `r` is the region of states that are reachable from `recur` in *k+1* steps and may have a cycle;
 - `new` is the region of states that are reachable from the `new` of the previous iteration in a single step;
@@ -77,15 +77,21 @@ We build the self loop starting from `s` using the `frontiers`, we assume
 their correctness from (2.1) in the function `build_loop`.
 
 We find the smallest index `k` in which we can find `s`, it for sure exists
-given the condition imposed in (2.1) and we build a path from `s` going backwards
-(range k ... 0) following the frontiers, picking any of the state between them and 
-one of the input necessary to perform that transition (if present) storing if
-every time it inside the list `path`.
+given the condition imposed in (2.1). Then we build the loop starting from `s` travelling withing the `k` leading elements of `frontiers`.
 
-- `path` represents a symbolic path over 
+In this function, we define the following invariants after *n* iterations:
 
-By inductive construction is clear that at the end of the iteration inside
-`path` is present a sequence of state and inputs starting from `s` and going back to itself.
+- `path` represents a symbolic path long *k* ending in the knot (`s`);
+- `curr` is the last state put in `path`.
+
+The algorith builds the path going backwards
+(range *k - 1, ..., 0*) following the frontiers, picking a state between them (it doesn't matter which state, but it must be one in the *pre-*region of the last `curr`) and 
+one of the inputs necessary to perform the transition (if present) storing it inside the list `path`. 
+
+After the last iteration, `path` represents a full path ending in `s` and starting from a state in the first `frontiers` region (by inductive construction), which we recall, being the states reachable from recur in a single step. After that, the algorithm computes the last "pre" transition, adding the input state (if needed) and the knot state.
+
+Therefore it's clear that at the end of the function
+`path` holds a sequence of states and inputs starting from `s` going back to `s`.
 
 ### 2.3 Reaching the self loop
 
