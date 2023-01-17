@@ -37,9 +37,13 @@ In this cycle's body, we consider two regions:
 - `pre_reach`, which represents all the state that can reach `recur` in a finite number of steps greater than 0;
 - `new`, which represents all the states that might be part of the cycle, i.e. the ones reachable in a finite positive number of steps.
 
-Then, we have an inner cycle that updates `pre_reach`: each iteration, it computes every time a new set of states which can reach the `new` region in a single step; then it adds them to the `pre_reach` set. Of course, the algorithm takes only the ones where *g* doesn't hold.
+Then, we have an inner cycle that updates `pre_reach`: each iteration, it computes every time a region of states which can reach the `new` region in a single step; then it ignores the old ones and adds only the new ones to the `pre_reach` set. Of course, the algorithm takes only the ones where *g* doesn't hold.
 
-Note that this process ensures that `pre_reach` represents a region where there could be a loop within *k* steps, where *k* is the number of iterations. Thus, when all the knots in `recur` are also in `pre_reach`, there is a cycle starting from one of those points.
+Note that this process ensures that `pre_reach` represents a region where there could be a loop within *k* steps, where *k* is the number of iterations. Thus, when all the knots in `recur` are also in `pre_reach`, it's sure that there is at least one cycle starting from one of those points. The algorithm will now find that cycle with the function `build_counter_example` (phase 2).
+
+The inner cycle ends when there are no more new states to visit and `recur` never turns out to be a subset of `pre_reach`. This means that there are some states that don't lead the execution into a cycle. We get rid of those states with an intersection with `pre_reach`, i.e. we keep only the knots that might lead to a cycle, then we start again the outer cycle.
+
+The outer cycle runs until there are no more possible candidates for a cycle (the algorithm keep reducing the `recur` region if it doesn't find any valid knot).
 
 ## 2. Counter example
 

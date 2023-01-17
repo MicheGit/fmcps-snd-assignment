@@ -243,15 +243,17 @@ def check_react_spec(spec):
             pre_reach += new
 
             if recur <= pre_reach:
-                # In recur there is for sure a path that has the following
-                # properties starts from a state where f is true and g it's
-                # never true
+                # In recur there is for sure a path that has the required
+                #   properties and starts from a state where f is true and
+                #   g isn't.
+                # Going to phase 2
                 return False, build_counter_example(
                         fsm, recur, pre_reach)
 
             new = (fsm.pre(new) - pre_reach) * spec_not_g
 
-        recur *= pre_reach # recur_{i+1}
+        # Let's discard all the ones that don't lead to a cycle
+        recur *= pre_reach
 
     return True, []
 
