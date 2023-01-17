@@ -69,36 +69,39 @@ keep the property *g* false, this is done by always taking the intersection with
 new nodes that we can reach at every new step) in the list `frontiers` (this will
 be used later).
 
-At the end of the loop, `r` will contain all the states reachable from `recur` in a finite positive number of steps. Since there is at least one cycle (as guaranteed by the correctness of step (1)), `r` must contain at least one state that is also in `recur` (the knot of the cycle). We then pick one such state (if there are more we can choose any of those), and we will call it `knot` going on.
+At the end of the loop, `r` will contain all the states reachable from `recur` in a finite positive number of steps. Since there is at least one cycle (as guaranteed by the correctness of step (1)), `r` must contain at least one state that is also in `recur` (the knot of the cycle). We then pick one such state (if there are more we can choose any of those), and we will refer to this chosen knot with the `s` variable going on.
 
 ### 2.2 Constructing the self loop
 
-We construct the self loop starting from `knot` using the `frontiers`, we assume
+We build the self loop starting from `s` using the `frontiers`, we assume
 their correctness from (2.1) in the function `build_loop`.
 
-We find the smallest index `k` in which we can find `knot`, it for sure exists
-given the condition imposed in (2.1) and we build a path from `knot` going backwards
+We find the smallest index `k` in which we can find `s`, it for sure exists
+given the condition imposed in (2.1) and we build a path from `s` going backwards
 (range k ... 0) following the frontiers, picking any of the state between them and 
 one of the input necessary to perform that transition (if present) storing if
 every time it inside the list `path`.
+
+- `path` represents a symbolic path over 
+
 By inductive construction is clear that at the end of the iteration inside
-`path` is present a sequence of state and inputs starting from `knot` and going back to itself.
+`path` is present a sequence of state and inputs starting from `s` and going back to itself.
 
 ### 2.3 Reaching the self loop
 
-From (2.1) we know that `knot` is a member of `recur` and from (1) we know that
-`recur` is a subset of `reach`. Therefore, `knot` is for sure a reachable state, thus we can
-construct a sequence starting from one of the initial state to `knot` in
+From (2.1) we know that `s` is a member of `recur` and from (1) we know that
+`recur` is a subset of `reach`. Therefore, `s` is for sure a reachable state, thus we can
+construct a sequence starting from one of the initial state to `s` in
 `build_prefix`.
 
 We perform a Dijkstra-like path finding to find a sequence of regions from the
-region of the initial states to reach `knot`. Inductively we construct the list
-`frontiers` where we store the sequence of regions that reach the state `knot`,
+region of the initial states to reach `s`. Inductively we construct the list
+`frontiers` where we store the sequence of regions that reach the state `s`,
 every one is a distance +1 transition from the preceding one. We know that the
-construction terminates since as we said before `knot` is a reachable state.
+construction terminates since as we said before `s` is a reachable state.
 
 By iterating `frontier` backwards we extract one of the states and the
 input necessary to go from a frontier and his predecessor and insert them inside
 the path, it's clear from the construction of `frontiers` that is always present
 such state and input, and at the end of iteration path contains the path from
-one of the initial states to `knot`.
+one of the initial states to `s`.
