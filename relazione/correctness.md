@@ -30,14 +30,16 @@ The goal is to find a cycle that invalidates the formula *□ ◊ f -> □ ◊ g
 
 Note that a cycle like that always contains at least one state where *f* is true and *g* is false. We will refer to this kind of states as **knots**, since we will use a node such that as the join point with the trace from the initial state.
 
-The variable `recur` will always contain the knots, i.e. the possible starting points of the cycle. When `recur` becomes empty then there are no possible cycle and the formula holds. 
+The variable `recur` will always contain the knots, i.e. the possible starting points of the cycle. When `recur` becomes empty then there are no possible cycle and the formula holds.
 
 In this cycle's body, we consider two regions:
 
 - `pre_reach`, which represents all the state that can reach `recur` in a finite number of steps greater than 0;
 - `new`, which represents all the states that might be part of the cycle, i.e. the ones reachable in a finite positive number of steps.
 
-Then, we have an inner cycle that updates `pre_reach` accordingly, adding every time the new ones. When `recur` is a subset of `pre_reach` it means that 
+Then, we have an inner cycle that updates `pre_reach`: each iteration, it computes every time a new set of states which can reach the `new` region in a single step; then it adds them to the `pre_reach` set. Of course, the algorithm takes only the ones where *g* doesn't hold.
+
+Note that this process ensures that `pre_reach` represents a region where there could be a loop within *k* steps, where *k* is the number of iterations. Thus, when all the knots in `recur` are also in `pre_reach`, there is a cycle starting from one of those points.
 
 ## 2. Counter example
 
