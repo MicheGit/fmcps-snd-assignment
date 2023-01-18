@@ -11,7 +11,7 @@ il controesempio è una trace con un ciclo dove f è valida una volta e g mai.
     - 
 --> 
 
-The goal of this algorithm is to find an execution for which a given formula in the form of *□ ◊ f -> □ ◊ g* doesn't hold. To do that it's enough to find a loop with at least one state in which *f* holds and *g* never holds.
+The goal of this algorithm is to find an execution for which a given formula in the form of *□ ◊ f -> □ ◊ g* doesn't hold. For this purpose, it's enough to find a loop with at least one state in which *f* holds and *g* never holds.
 
 The algorithm proceeds in two main phases:
 
@@ -54,7 +54,7 @@ of (1).
 
 ### 2.1 Finding a *knot*
 
-Within this part we will follow the steps of the execution from all the possible knots. In this context, we define the following invariants after *k* iterations:
+The algorithm checks each element inside the `recur` until it finds the one that starts the loop. With each of those states, we follow the steps of the execution from all the possible knots. We define the following invariants after *k* iterations of the inner loop:
 
 - `r` is the region of states that are reachable from `recur` in *k+1* steps and may have a cycle;
 - `new` is the region of states that are reachable from the `new` of the previous iteration in a single step;
@@ -73,8 +73,8 @@ At the end of the loop, `r` will contain all the states reachable from `recur` i
 
 ### 2.2 Constructing the self loop
 
-We build the self loop starting from `s` using the `frontiers`, we assume
-their correctness from (2.1) in the function `build_loop`.
+We build the self loop starting from `s`, following the path throug the `frontiers` list; we assume
+their correctness as a post-condition of the function `build_loop` (2.1).
 
 We find the smallest index `k` in which we can find `s`, it for sure exists
 given the condition imposed in (2.1). Then we build the loop starting from `s` travelling withing the `k` leading elements of `frontiers`.
