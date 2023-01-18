@@ -171,22 +171,23 @@ def build_prefix(fsm, s):
 def build_counter_example(fsm, recur, pre_reach):
     # Phase 2: Counter example
     # Phase 2.1: Finding a knot
-    r = BDD.false()
-    new = fsm.post(recur) * pre_reach
-    frontiers = [ new ]
+    for s in fsm.pick_all_states(recur):
+        r = BDD.false()
+        new = fsm.post(s) * pre_reach
+        frontiers = [ new ]
+        while not new.is_false():
+            r += new                         
+            new = fsm.post(new) * pre_reach  # We take only the ones where
+                                             # g is false.
 
-    while not new.is_false():
-        r += new
-        new = fsm.post(new) * pre_reach     # We take only the ones where
-                                            #   g is false.
-        new -= r                            # We skip the old ones.
-        frontiers.append(new)
-    
-    s = fsm.pick_one_state(recur * r)       # Let's pick one state in both recur and r.
+            new -= r                         # We skip the old ones.
+            frontiers.append(new)            
 
-    prefix = build_prefix(fsm, s)
-    postfix = build_loop(fsm, s, frontiers)
-    return tuple(prefix + postfix)
+        r *= recur
+        if s <= r:
+            return tuple(build_prefix(fsm, s) + build_loop(fsm, s, frontiers))
+
+    raise ValueError("The recurrence region does not contain any loop")
 
 def check_react_spec(spec):
     """
