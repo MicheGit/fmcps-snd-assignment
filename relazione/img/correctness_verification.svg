@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="looping_build.svg"
+   sodipodi:docname="correctness_verification.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.26425488"
-     inkscape:cx="1587.4825"
-     inkscape:cy="158.93747"
+     inkscape:zoom="1.0570195"
+     inkscape:cx="556.75415"
+     inkscape:cy="403.96605"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -235,7 +235,7 @@
          id="tspan26204"
          style="stroke-width:0.124848"
          x="65.052391"
-         y="46.491699">Pre(Recur)</tspan></text>
+         y="46.491699">Pre(recur)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -411,12 +411,12 @@
        transform="matrix(0.26017343,0,0,0.26017343,84.894766,42.102745)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan134145"><tspan
+         id="tspan572904"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan134143">Is recur contained by </tspan></tspan><tspan
+           id="tspan572902">Is recur contained by </tspan></tspan><tspan
          x="360.00244"
          y="107.4196"
-         id="tspan134147">pre_reach?</tspan></text>
+         id="tspan572906">pre_reach?</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -443,7 +443,7 @@
        transform="matrix(0.26017343,0,0,0.26017343,96.335985,90.836497)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan134149">Is new empty?</tspan></text>
+         id="tspan572908">Is new empty?</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -470,7 +470,7 @@
        transform="matrix(0.26017343,0,0,0.26017343,-14.639284,132.74807)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan134151">Recur is  empty?</tspan></text>
+         id="tspan572910">Recur is  empty?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.08392px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0770984"
@@ -547,7 +547,7 @@
          id="tspan212400"
          style="font-size:3.32929px;stroke-width:0.124848"
          x="71.832603"
-         y="81.461868">new= Pre(Recur) ∩ ¬G</tspan></text>
+         y="81.461868">new= Pre(recur) ∩ ¬G</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.32929px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -583,9 +583,9 @@
          id="tspan152797"
          style="font-size:3.32929px;stroke-width:0.124848"
          x="178.09195"
-         y="185.47702">Recur<tspan
+         y="185.47702">recur<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan124004">n+1</tspan>=Recur<tspan
+   id="tspan124004">n+1</tspan>=recur<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan129160">n</tspan> ∩ pre_reach</tspan></text>
     <text
@@ -598,7 +598,7 @@
          style="stroke-width:0.124848"
          x="173.59523"
          y="147.01086"
-         id="tspan301759">Recur<tspan
+         id="tspan301759">recur<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan114784">n</tspan></tspan></text>
     <text
@@ -611,7 +611,7 @@
          id="tspan204785-3"
          style="font-size:3.32929px;stroke-width:0.124848"
          x="193.48509"
-         y="166.91199">Recur<tspan
+         y="166.91199">recur<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan118722">n+1</tspan></tspan></text>
     <text
