@@ -22,7 +22,7 @@ The algorithm will always need to ignore all the non-reachable states, therefore
 
 <p align="center">
   <img src="/relazione/img/correctness_verification.svg"
-       alt="Reachablity of the model">
+       alt="Correctnes of the model">
 </p>
 
 The goal is to find a cycle that invalidates the formula *□ ◊ f -> □ ◊ g*. As showed before, it will be enough to find a cycle where *g* never holds and *f* holds at least in one state. We will find the states where *f* holds and *g* doesn't as **knots**; we will use a node of them as the join point with the trace from the initial state.
@@ -53,7 +53,7 @@ of (1).
 
 <p align="center">
   <img src="/relazione/img/knot_research.svg"
-       alt="Reachablity of the model">
+       alt="Knot searching">
 </p>
 
 The algorithm checks each element inside the `recur` until it finds the one that starts the loop. The algorithm computes the executions starting from each of those states, always staying in `pre_reach`, until it finds one that goes back to the start.
@@ -79,7 +79,7 @@ At the end of the loop, `r` will contain all the states reachable from `recur` i
 
 <p align="center">
   <img src="/relazione/img/loop_building.svg"
-       alt="Reachablity of the model">
+       alt="CE loop building">
 </p>
 
 
@@ -104,7 +104,7 @@ Therefore it's clear that at the end of the function
 
 <p align="center">
   <img src="/relazione/img/prefix_building.svg"
-       alt="Reachablity of the model">
+       alt="CE prefix building">
 </p>
 
 From (2.1) we know that `s` is a member of `recur` and from (1) we know that
