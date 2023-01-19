@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0570195"
-     inkscape:cx="490.05719"
-     inkscape:cy="565.7417"
+     inkscape:zoom="0.26425488"
+     inkscape:cx="1587.4825"
+     inkscape:cy="158.93747"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -138,12 +138,12 @@
          style="stroke-width:0.124848"
          x="133.24025"
          y="46.453724">pre_reach<tspan
-   style="font-size:3.24605px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan398629">1</tspan></tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan55319">n</tspan></tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.124848"
          x="133.24025"
-         y="52.696114"
+         y="52.69611"
          id="tspan14846-1" /></text>
     <ellipse
        style="fill:#ff0000;fill-opacity:0.5;stroke:none;stroke-width:0.0914366"
@@ -305,8 +305,21 @@
          style="stroke-width:0.124848"
          x="226.63142"
          y="45.16021">Pre(new<tspan
-   style="font-size:3.24605px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan377113">1</tspan>)</tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan72229">n</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
+       x="226.24507"
+       y="63.07246"
+       id="text26206-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan26204-1-6"
+         style="stroke-width:0.124848"
+         x="226.24507"
+         y="63.07246">new<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan98468">n+1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -324,19 +337,6 @@
        d="m 259.20921,55.962917 a 18.730749,16.231519 0 0 0 -10.19172,13.247571 21.856098,16.416572 0 0 1 12.13175,3.835672 26.276929,19.052619 0 0 0 1.92588,-7.136103 26.276929,19.052619 0 0 0 -3.86591,-9.94714 z" />
     <text
        xml:space="preserve"
-       style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
-       x="230.92281"
-       y="63.332497"
-       id="text38780-9"><tspan
-         sodipodi:role="line"
-         id="tspan38778-3"
-         style="stroke-width:0.124848"
-         x="230.92281"
-         y="63.332497">new<tspan
-   style="font-size:3.24605px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan380661">2</tspan></tspan></text>
-    <text
-       xml:space="preserve"
        style="font-size:3.32929px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
        x="135.67702"
        y="75.249306"
@@ -346,10 +346,10 @@
          style="font-size:3.32929px;stroke-width:0.124848"
          x="135.67702"
          y="75.249306">pre_reach<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan407249">2</tspan>=pre_reach<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan403977">1</tspan> ∪ new</tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan60487">n+1</tspan>=pre_reach<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan65577">n</tspan> ∪ new</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.32929px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -361,10 +361,10 @@
          style="font-size:3.32929px;stroke-width:0.124848"
          x="224.84375"
          y="113.18618">new<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan385919">2</tspan> =(Pre(new<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan389137">1</tspan>) - pre_reach) ∩ ¬G</tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan102964">n+1</tspan> =(Pre(new<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan106626">n</tspan>) - pre_reach) ∩ ¬G</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.235934;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="m 47.944155,61.546461 h 8.925994"
@@ -411,12 +411,12 @@
        transform="matrix(0.26017343,0,0,0.26017343,84.894766,42.102745)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan56098"><tspan
+         id="tspan134145"><tspan
            style="text-align:center;text-anchor:middle"
-           id="tspan56096">Is recur contained by </tspan></tspan><tspan
+           id="tspan134143">Is recur contained by </tspan></tspan><tspan
          x="360.00244"
          y="107.4196"
-         id="tspan56100">pre_reach?</tspan></text>
+         id="tspan134147">pre_reach?</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -443,7 +443,7 @@
        transform="matrix(0.26017343,0,0,0.26017343,96.335985,90.836497)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan56102">Is new empty?</tspan></text>
+         id="tspan134149">Is new empty?</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -470,7 +470,7 @@
        transform="matrix(0.26017343,0,0,0.26017343,-14.639284,132.74807)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan56104">Recur is  empty?</tspan></text>
+         id="tspan134151">Recur is  empty?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.08392px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0770984"
@@ -584,10 +584,10 @@
          style="font-size:3.32929px;stroke-width:0.124848"
          x="178.09195"
          y="185.47702">Recur<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan361621">2</tspan>=Recur<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan364533">1</tspan> ∩ pre_reach</tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan124004">n+1</tspan>=Recur<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan129160">n</tspan> ∩ pre_reach</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -599,8 +599,8 @@
          x="173.59523"
          y="147.01086"
          id="tspan301759">Recur<tspan
-   style="font-size:3.24605px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan348819">1</tspan></tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan114784">n</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.32929px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
@@ -612,8 +612,8 @@
          style="font-size:3.32929px;stroke-width:0.124848"
          x="193.48509"
          y="166.91199">Recur<tspan
-   style="font-size:2.16404px;baseline-shift:sub;stroke-width:0.124848"
-   id="tspan353687">2</tspan></tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan118722">n+1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.99391px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.124848"
