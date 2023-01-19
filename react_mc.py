@@ -103,7 +103,7 @@ def compute_reachability(fsm):
 def build_loop(fsm, s, frontiers):
     has_inputs = len(fsm.bddEnc.inputsVars) > 0
 
-    # Phase 2.2: Constructing the self loop
+    # Phase 2.2: Building the self loop
     for k in range(len(frontiers)):
         if s <= frontiers[k]:
             break
