@@ -13,7 +13,17 @@ The algorithm proceeds in two main phases:
 
 The algorithm will always need to ignore all the non-reachable states, therefore as first thing it computes the set of reachable states with the function `compute_reachability`. The algorithm will always stay in the reachable set.
 
+<p align="center">
+  <img src="/relazione/img/reach_def.svg"
+       alt="Reachablity of the model">
+</p>
+
 ## 1. Checking for correctness of the model
+
+<p align="center">
+  <img src="/relazione/img/correctness_verification.svg"
+       alt="Reachablity of the model">
+</p>
 
 The goal is to find a cycle that invalidates the formula *□ ◊ f -> □ ◊ g*. As showed before, it will be enough to find a cycle where *g* never holds and *f* holds at least in one state. We will find the states where *f* holds and *g* doesn't as **knots**; we will use a node of them as the join point with the trace from the initial state.
 
@@ -30,6 +40,8 @@ The inner cycle ends when there are no more new states to visit and `recur` neve
 
 The outer cycle runs until there are no more possible candidates for a cycle (the algorithm keep reducing the `recur` region if it doesn't find any valid knot).
 
+
+
 ## 2. Counter example
 
 Given `recur` and `pre_reach` correctly defined as in (1), the function
@@ -38,6 +50,11 @@ condition set by the reactivity formula, that for sure it exists given the condi
 of (1).
 
 ### 2.1 Finding a *knot*
+
+<p align="center">
+  <img src="/relazione/img/knot_research.svg"
+       alt="Reachablity of the model">
+</p>
 
 The algorithm checks each element inside the `recur` until it finds the one that starts the loop. The algorithm computes the executions starting from each of those states, always staying in `pre_reach`, until it finds one that goes back to the start.
 
@@ -60,6 +77,12 @@ At the end of the loop, `r` will contain all the states reachable from `recur` i
 
 ### 2.2 Building the self loop
 
+<p align="center">
+  <img src="/relazione/img/loop_building.svg"
+       alt="Reachablity of the model">
+</p>
+
+
 We build the self loop starting from `s`, following the path throug the `frontiers` list; we assume their correctness as a post-condition of the function `build_loop` (2.1).
 
 We find the smallest index `k` in which we can find `s`, by (2.1) it exists for sure. Then we build the loop starting from `s` travelling withing the `k` leading elements of `frontiers`.
@@ -78,6 +101,11 @@ Therefore it's clear that at the end of the function
 `path` holds a sequence of states and inputs starting from `s` going back to `s`.
 
 ### 2.3 Reaching the self loop
+
+<p align="center">
+  <img src="/relazione/img/prefix_building.svg"
+       alt="Reachablity of the model">
+</p>
 
 From (2.1) we know that `s` is a member of `recur` and from (1) we know that
 `recur` is a subset of `reach`. Therefore, `s` is for sure a reachable state, thus we can
