@@ -127,7 +127,7 @@ def build_loop(fsm, s, frontiers):
     
     # Looping input
     if has_inputs:
-        inputs = fsm.get_inputs_between_states(curr, s)
+        inputs = fsm.get_inputs_between_states(s, curr)
         path.insert(0, fsm.pick_one_inputs(inputs).get_str_values())
     else:
         path.insert(0, {})
