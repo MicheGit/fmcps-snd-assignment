@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.2965094"
-     inkscape:cx="900.10918"
-     inkscape:cy="122.63698"
+     inkscape:zoom="3.6143439"
+     inkscape:cx="652.1239"
+     inkscape:cy="320.3901"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -593,29 +593,29 @@
        transform="matrix(0.13541894,0,0,0.13541894,121.29747,59.8262)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan1093">Is new empty?</tspan></text>
+         id="tspan1094">Is new empty?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
-       x="163.18732"
-       y="71.465073"
+       x="168.3091"
+       y="69.666954"
        id="text124559-7"><tspan
          sodipodi:role="line"
          id="tspan124557-8"
          style="stroke-width:0.0401293"
-         x="163.18732"
-         y="71.465073">No</tspan></text>
+         x="168.3091"
+         y="69.666954">No</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
-       x="168.08806"
-       y="79.278801"
+       x="168.34712"
+       y="78.76207"
        id="text124559-2-9"><tspan
          sodipodi:role="line"
          id="tspan124557-3-4"
          style="stroke-width:0.0401293"
-         x="168.08806"
-         y="79.278801">Yes</tspan></text>
+         x="168.34712"
+         y="78.76207">Yes</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -643,7 +643,7 @@
        transform="matrix(0.13541894,0,0,0.13541894,19.056358,19.930845)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan1095">Is s contained in r?</tspan></text>
+         id="tspan1096">Is s contained in r?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
