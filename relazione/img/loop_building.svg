@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="391mm"
-   height="88mm"
-   viewBox="0 0 391 88"
+   width="400mm"
+   height="75mm"
+   viewBox="0 0 400 75"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="4.359103"
-     inkscape:cx="157.81349"
-     inkscape:cy="183.63739"
-     inkscape:window-width="960"
+     inkscape:zoom="0.79494954"
+     inkscape:cx="1117.052"
+     inkscape:cy="-85.540021"
+     inkscape:window-width="1920"
      inkscape:window-height="1011"
-     inkscape:window-x="960"
+     inkscape:window-x="0"
      inkscape:window-y="32"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      width="298mm" />
   <defs
@@ -151,26 +151,26 @@
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
        x="25.048796"
-       y="30.416697"
+       y="39.397297"
        id="text217045-5"><tspan
          sodipodi:role="line"
          id="tspan217043-2"
          style="font-size:2.4197px;stroke-width:0.113423"
          x="25.048796"
-         y="30.416697">frontier<tspan
+         y="39.397297">frontier<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan178434">1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="24.923923"
-       y="39.202614"
+       x="25.00798"
+       y="30.730602"
        id="text217045-5-31"><tspan
          sodipodi:role="line"
          id="tspan217043-2-94"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="24.923923"
-         y="39.202614">frontier<tspan
+         x="25.00798"
+         y="30.730602">frontier<tspan
    style="font-size:65%;baseline-shift:sub"
    id="tspan190787">n</tspan></tspan></text>
     <text
@@ -217,9 +217,9 @@
        transform="matrix(0.13541894,0,0,0.13541894,11.079952,18.160708)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan528366">Is s contained in frontier<tspan
+         id="tspan6989">Is s contained in frontier<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan528364">k</tspan>?</tspan></text>
+   id="tspan6987">k</tspan>?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
@@ -266,7 +266,7 @@
          id="tspan23365"
          style="stroke-width:0.264583"
          x="52.970058"
-         y="22.866354"></tspan></text>
+         y="22.866354" /></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.143458;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect203243-6-5"
@@ -288,14 +288,14 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="194.76207"
+       x="194.23291"
        y="12.479483"
        id="text205175-5-6-0"><tspan
          sodipodi:role="line"
          id="tspan205173-6-2-5"
          style="stroke-width:0.113423"
-         x="194.76207"
-         y="12.479483">k-1</tspan></text>
+         x="194.23291"
+         y="12.479483">k=k-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0535208"
@@ -404,25 +404,25 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="84.480774"
-       y="36.603489"
+       x="84.485344"
+       y="32.463646"
        id="text214394-7-2"><tspan
          sodipodi:role="line"
          id="tspan214392-4-7"
          style="stroke-width:0.113423"
-         x="84.480774"
-         y="36.603489">...</tspan></text>
+         x="84.485344"
+         y="32.463646">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="85.91951"
-       y="32.597755"
+       x="85.849358"
+       y="36.637032"
        id="text217045-5-0"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="85.91951"
-         y="32.597755">s</tspan></text>
+         x="85.849358"
+         y="36.637032">s</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.17683;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect203243-6-5-5"
@@ -452,25 +452,25 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="262.57697"
-       y="39.288204"
+       x="262.09143"
+       y="31.025272"
        id="text214394-7-2-5"><tspan
          sodipodi:role="line"
          id="tspan214392-4-7-6"
          style="stroke-width:0.113423"
-         x="262.57697"
-         y="39.288204">...</tspan></text>
+         x="262.09143"
+         y="31.025272">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="263.30167"
-       y="31.633228"
+       x="263.78415"
+       y="39.98859"
        id="text217045-5-0-9"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="263.30167"
-         y="31.633228">s</tspan></text>
+         x="263.78415"
+         y="39.98859">s</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
@@ -515,39 +515,39 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="262.80234"
-       y="65.775703"
+       x="262.22968"
+       y="55.041595"
        id="text214394-7-2-5-8"><tspan
          sodipodi:role="line"
          id="tspan214392-4-7-6-8"
          style="stroke-width:0.113423"
-         x="262.80234"
-         y="65.775703">...</tspan></text>
+         x="262.22968"
+         y="55.041595">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="263.92801"
-       y="55.219887"
+       x="264.01053"
+       y="65.937523"
        id="text217045-5-0-9-4"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3-3"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="263.92801"
-         y="55.219887">s</tspan></text>
+         x="264.01053"
+         y="65.937523">s</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.113423"
-       x="265.28995"
+       x="264.81229"
        y="59.525906"
        id="text217045-5-0-9-7-1"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3-4-4"
          style="font-size:2.4197px;text-align:center;text-anchor:middle;stroke-width:0.113423"
-         x="265.28995"
+         x="264.81229"
          y="59.525906">{input},</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.4197px;text-align:center;text-anchor:middle;stroke-width:0.113423"
-         x="265.28995"
+         x="264.81229"
          y="62.550529"
          id="tspan365176">curr</tspan></text>
     <path
@@ -581,7 +581,7 @@
        transform="matrix(0.13541894,0,0,0.13541894,188.6854,17.780531)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan528368">the model  has input?</tspan></text>
+         id="tspan6991">the model  has input?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
@@ -620,7 +620,7 @@
        transform="matrix(0.13541894,0,0,0.13541894,238.48043,36.640861)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan528370">the all frontier is visited?</tspan></text>
+         id="tspan6993">the all frontier is visited?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
@@ -675,7 +675,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
-       d="m 193.27172,34.011905 16.8112,0"
+       d="m 193.27172,34.011905 h 16.8112"
        id="path259880"
        sodipodi:nodetypes="cc" />
     <circle
@@ -698,7 +698,7 @@
        r="1.5725521" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 220.03336,33.93281 20.61203,0"
+       d="m 220.03336,33.93281 h 20.61203"
        id="path351459"
        sodipodi:nodetypes="cc" />
     <path
@@ -760,62 +760,62 @@
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="333.63226"
-       y="30.093536"
+       x="334.41565"
+       y="38.579079"
        id="text217045-5-0-9-6"><tspan
          id="tspan217043-2-9-3-8"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="333.63226"
-         y="30.093536"
+         x="334.41565"
+         y="38.579079"
          sodipodi:role="line">s</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="332.16269"
-       y="38.791725"
+       x="331.74011"
+       y="30.307331"
        id="text217045-5-0-9-7-0"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3-4-2"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="332.16269"
-         y="38.791725">{},s</tspan></text>
+         x="331.74011"
+         y="30.307331">{},s</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.198281;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.184707;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect203243-6-5-5-7-0"
-       width="14.805777"
-       height="16.386637"
-       x="327.70874"
-       y="52.231346" />
+       width="14.832866"
+       height="14.193962"
+       x="327.98834"
+       y="53.913776" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.113423px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 327.71042,56.519873 h 14.80243"
+       d="m 328.00358,60.217211 h 14.80243"
        id="path208998-9-9-7-81-6" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.113423px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 327.71042,60.806743 h 14.80243"
+       d="m 328.00358,64.504081 h 14.80243"
        id="path208998-0-3-1-6-2-2" />
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="333.16815"
-       y="58.690678"
+       x="333.4613"
+       y="62.388016"
        id="text214394-7-2-5-89-9"><tspan
          sodipodi:role="line"
          id="tspan214392-4-7-6-3-9"
          style="stroke-width:0.113423"
-         x="333.16815"
-         y="58.690678">...</tspan></text>
+         x="333.4613"
+         y="62.388016">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="334.22879"
-       y="55.048401"
+       x="334.72238"
+       y="66.919823"
        id="text217045-5-0-9-6-0"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3-8-8"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="334.22879"
-         y="55.048401">s</tspan></text>
+         x="334.72238"
+         y="66.919823">s</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
@@ -830,18 +830,18 @@
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.113423"
-       x="335.11658"
-       y="63.991043"
+       x="335.63528"
+       y="56.566345"
        id="text217045-5-0-9-7-1-4"><tspan
          sodipodi:role="line"
          id="tspan217043-2-9-3-4-4-6"
          style="font-size:2.4197px;text-align:center;text-anchor:middle;stroke-width:0.113423"
-         x="335.11658"
-         y="63.991043">{input},</tspan><tspan
+         x="335.63528"
+         y="56.566345">{input},</tspan><tspan
          sodipodi:role="line"
          style="font-size:2.4197px;text-align:center;text-anchor:middle;stroke-width:0.113423"
-         x="335.11658"
-         y="67.015671"
+         x="335.63528"
+         y="59.590969"
          id="tspan365176-2">s</tspan></text>
     <path
        sodipodi:type="star"
@@ -870,7 +870,7 @@
        transform="matrix(0.13541894,0,0,0.13541894,268.18809,33.74204)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan528372">the model  has input?</tspan></text>
+         id="tspan6995">the model  has input?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"

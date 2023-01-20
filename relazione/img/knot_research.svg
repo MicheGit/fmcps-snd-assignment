@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.77058779"
-     inkscape:cx="626.79426"
-     inkscape:cy="412.672"
+     inkscape:zoom="1.2965094"
+     inkscape:cx="900.10918"
+     inkscape:cy="122.63698"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -449,25 +449,25 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="202.71904"
-       y="24.836456"
+       x="202.94333"
+       y="20.838902"
        id="text214394"><tspan
          sodipodi:role="line"
          id="tspan214392"
          style="stroke-width:0.113423"
-         x="202.71904"
-         y="24.836456">...</tspan></text>
+         x="202.94333"
+         y="20.838902">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="202.55844"
-       y="20.933372"
+       x="202.53215"
+       y="25.191238"
        id="text217045"><tspan
          sodipodi:role="line"
          id="tspan217043"
          style="font-size:2.4197px;stroke-width:0.113423"
-         x="202.55844"
-         y="20.933372">new</tspan></text>
+         x="202.53215"
+         y="25.191238">new</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
@@ -519,25 +519,25 @@
     <text
        xml:space="preserve"
        style="font-size:4.53693px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
-       x="201.93948"
-       y="78.38826"
+       x="202.26831"
+       y="69.777946"
        id="text214394-7"><tspan
          sodipodi:role="line"
          id="tspan214392-4"
          style="stroke-width:0.113423"
-         x="201.93948"
-         y="78.38826">...</tspan></text>
+         x="202.26831"
+         y="69.777946">...</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.4197px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.113423"
        x="201.59326"
-       y="70.083702"
+       y="78.589706"
        id="text217045-5"><tspan
          sodipodi:role="line"
          id="tspan217043-2"
          style="font-size:2.4197px;stroke-width:0.113423"
          x="201.59326"
-         y="70.083702">new<tspan
+         y="78.589706">new<tspan
    style="font-size:1.5728px;baseline-shift:sub;stroke-width:0.113423"
    id="tspan345237">n</tspan></tspan></text>
     <text
@@ -554,7 +554,7 @@
    style="font-size:1.5728px;baseline-shift:sub;stroke-width:0.113423"
    id="tspan339052">n+1</tspan></tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.214344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       style="fill:none;stroke:#000000;stroke-width:0.214;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0999999;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="m 214.97914,22.285404 h 24.23634"
        id="path1268" />
     <path
@@ -590,32 +590,32 @@
        x="360.00244"
        y="97.718208"
        id="text107081-1"
-       transform="matrix(0.13541894,0,0,0.13541894,115.15001,58.119043)"><tspan
+       transform="matrix(0.13541894,0,0,0.13541894,121.29747,59.8262)"><tspan
          x="360.00244"
          y="97.718208"
          id="tspan1093">Is new empty?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
-       x="168.74677"
-       y="78.986031"
+       x="163.18732"
+       y="71.465073"
        id="text124559-7"><tspan
          sodipodi:role="line"
          id="tspan124557-8"
          style="stroke-width:0.0401293"
-         x="168.74677"
-         y="78.986031">No</tspan></text>
+         x="163.18732"
+         y="71.465073">No</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
-       x="156.05168"
-       y="73.247841"
+       x="168.08806"
+       y="79.278801"
        id="text124559-2-9"><tspan
          sodipodi:role="line"
          id="tspan124557-3-4"
          style="stroke-width:0.0401293"
-         x="156.05168"
-         y="73.247841">Yes</tspan></text>
+         x="168.08806"
+         y="79.278801">Yes</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -643,7 +643,7 @@
        transform="matrix(0.13541894,0,0,0.13541894,19.056358,19.930845)"><tspan
          x="360.00244"
          y="97.718208"
-         id="tspan1095">Is s contained in r??</tspan></text>
+         id="tspan1095">Is s contained in r?</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:1.60516px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;stroke-width:0.0401293"
@@ -670,10 +670,6 @@
        style="fill:none;stroke:#000000;stroke-width:0.214344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 195.09765,74.013393 H 169.60302"
        id="path2191" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.214344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M 165.36153,74.013383 H 98.638147 V 36.823792"
-       id="path2417" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.219098;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="m 167.48671,76.130813 v 6.66505 H 63.804908 v -12.5807"
@@ -740,5 +736,10 @@
        style="fill:none;stroke:#000000;stroke-width:0.214344;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
        d="M 61.85195,33.024433 H 30.871397 v 43.33098"
        id="path116221" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.214;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 167.48226,71.892643 V 50.794557 h 36.09943 V 36.586371 h 29.84861 v -9.781495 l 5.54473,0.05138"
+       id="path3525"
+       sodipodi:nodetypes="ccccccc" />
   </g>
 </svg>
